@@ -1,0 +1,206 @@
+        /* CSS Reset and Base Styles */
+        :root {
+            /* Color Palette - 5 Core Colors */
+            --color-primary: #1b3731;     /* Vibrant Blue - Main Brand Color */
+            --color-secondary: #357266;   /* Emerald Green - Complementary Action Color */
+            --color-accent: #65532f;      /* Passionate Red - Highlight / Warning Color */
+            --color-neutral: #312509;     /* Dark Teal - Neutral Text and Background */
+            --color-highlight: #a3bbad;   /* Muted Teal - Accent / Attention Color */
+            
+            /* Derived Colors for Flexibility */
+            --color-background: color-mix(in srgb, var(--color-neutral) 10%, white);
+            --color-text-dark: var(--color-neutral);
+            --color-text-light: white;
+
+            /* Typography */
+            --font-primary: 'Lilita One', -apple-system, BlinkMacSystemFont, sans-serif;
+            --font-secondary: 'Quicksand', monospace;
+
+            /* Spacing System */
+            --spacing-xs: 0.25rem;
+            --spacing-sm: 0.5rem;
+            --spacing-md: 1rem;
+            --spacing-lg: 1.5rem;
+            --spacing-xl: 2rem;
+
+            /* Border Radius */
+            --radius-sm: 4px;
+            --radius-md: 8px;
+            --radius-lg: 12px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-secondary);
+            line-height: 1.6;
+            background-color: var(--color-background);
+            color: var(--color-text-dark);
+            padding: var(--spacing-xl);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Typography Styles */
+        h1 {
+            font-family: var(--font-primary);
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: var(--spacing-md);
+            color: var(--color-primary);
+            text-align: center;
+        }
+
+        h2 {
+            font-family: var(--font-primary);
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: var(--spacing-md);
+            color: var(--color-secondary);
+        }
+
+        h3 {
+            font-family: var(--font-primary);
+            font-size: 1.5rem;
+            font-weight: 500;
+            margin-bottom: var(--spacing-sm);
+            color: var(--color-accent);
+        }
+
+nav {
+  height: 50px;
+  background-color: #a3bbad;
+  display: flex;
+  padding: 1% 0;
+  margin-bottom: 10px;
+}
+
+nav ul {
+  padding: 0;
+  list-style-type: none;
+  flex: 2;
+  display: flex;
+}
+
+nav li {
+  display: inline;
+  text-align: center;
+  flex: 1;
+}
+
+nav a {
+  display: inline-block;
+  font-size: 1 rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: black;
+}
+
+img {
+    width: 25%;
+    height: 25%;
+    float: left;
+    margin: 0px 50px 0px 0px;
+}
+
+embed {
+    width: 100%;
+    height: 100%;
+}
+
+ul {
+    list-style-position: inside;
+}
+
+        .body-text {
+            font-family: var(--font-secondary);
+            font-size: 1rem;
+            margin-bottom: var(--spacing-md);
+        }
+
+        .small-text {
+            font-family: var(--font-secondary);
+            font-size: 0.75rem;
+            color: color-mix(in srgb, var(--color-text-dark) 70%, transparent);
+        }
+
+        /* Color Palette Section */
+        .color-palette {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--spacing-md);
+            margin-bottom: var(--spacing-xl);
+        }
+
+        .color-swatch {
+            font-family: var(--font-secondary);
+            padding: var(--spacing-md);
+            border-radius: var(--radius-md);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        /* Component Styles */
+        .button {
+            font-family: var(--font-secondary);
+            display: inline-block;
+            padding: var(--spacing-sm) var(--spacing-md);
+            background-color: var(--color-primary);
+            color: var(--color-text-light);
+            text-decoration: none;
+            border-radius: var(--radius-sm);
+            transition: background-color 0.3s ease, transform 0.2s;
+            border: 2px solid transparent;
+        }
+
+        .button:hover {
+            background-color: color-mix(in srgb, var(--color-primary) 80%, black);
+            border-color: var(--color-secondary);
+            transform: scale(1.05);
+        }
+
+        .button:active {
+            transform: scale(0.95);
+            background-color: var(--color-secondary);
+        }
+
+        .link {
+            font-family: var(--font-secondary);
+            color: var(--color-secondary);
+            text-decoration: none;
+            transition: color 0.3s ease, text-decoration-color 0.3s;
+        }
+
+        .link:hover {
+            color: var(--color-accent);
+            text-decoration: underline;
+            text-decoration-color: var(--color-highlight);
+        }
+
+        .link:visited {
+            font-family: var(--font-secondary);
+            color: var(--color-neutral);
+        }
+
+        /* Spacing Demonstration */
+        .spacing-demo {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+            margin-bottom: var(--spacing-md);
+        }
+
+        .spacing-block {
+            background-color: var(--color-primary);
+            height: 50px;
+        }
