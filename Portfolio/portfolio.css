@@ -64,6 +64,7 @@
             font-weight: 600;
             margin-bottom: var(--spacing-md);
             color: var(--color-secondary);
+            text-align: center;
         }
 
         h3 {
@@ -117,6 +118,7 @@ embed {
 
 ul {
     list-style-position: inside;
+    margin: 0px 0px 0px 20px;
 }
 
         .body-text {
