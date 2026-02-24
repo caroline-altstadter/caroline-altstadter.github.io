@@ -19,7 +19,7 @@ article {
   background-image: linear-gradient(to bottom, grey, white, grey);
   border-top: 1mm solid red;
   border-bottom: 1mm solid red;
-  background: linear-gradient(to bottom, rgba(0,0,0,.2), rgba(0,0,0,0) 25%, rgba(0,0,0.2)) ,url(top-image.png) no-repeat top left, url(bottom-image.png) no-repeat bottom left;
+  background: linear-gradient(to bottom, rgba(0,0,0,.2), rgba(0,0,0,0) 25%, rgba(0,0,0,0) 75%, rgba(0,0,0,.2) 100%) ,url(top-image.png) no-repeat top left, url(bottom-image.png) no-repeat bottom left;
     background-color: white;
 }
 
