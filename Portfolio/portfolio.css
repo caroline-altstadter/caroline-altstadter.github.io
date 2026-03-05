@@ -104,12 +104,13 @@
         color: black;
         }
 
-        img {
+        /* img {
             width: 25%;
             height: 25%;
             float: left;
             margin: 0px 50px 0px 0px;
         }
+            */
 
         embed {
             width: 100%;
@@ -211,5 +212,35 @@
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 20px;
+            grid-template-areas:
+            "aa bb"
+            "cc dd";
+        }
+
+        .education {
+            grid-area: aa;
+        }
+
+        .experience {
+            grid-area: cc;
+        }
+
+        .skillssec {
+            grid-area: bb;
         }
         
+        .softwares {
+            grid-area: dd;
+        }
+
+        .year {
+            font-family: "Lilita One";
+            font-size: 1.5rem;
+            color: #357266;
+        }
+
+        .softimg {
+            max-width: 10%;
+            max-height: 10%; 
+        }
+
