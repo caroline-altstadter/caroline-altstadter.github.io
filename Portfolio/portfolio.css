@@ -81,7 +81,7 @@
             align-items: center;
             justify-content: space-between;
             height: 75px;
-            background-color: #a3bbad;
+            background-color: #c2cfc7;
             padding: 0;
             margin-top: -30px;
             margin-bottom: 10px;
@@ -316,6 +316,30 @@
             background: white;
             padding: 2rem;
             border-radius: 8px;
-            max-width: 400px;
+            max-width: 700px;
             width: 90%;
+        }
+        
+        .popup-content {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        #package1 {
+            width: 200px;
+            height: auto;
+            float: left;
+        }
+
+        #close, #close2, #close3, #close4 {
+            display: block;
+            margin-left: auto;
+            margin-top: 1rem;
+        }
+
+        #package1-large {
+            max-width: 90%;
+            max-height: 90vh;
+            border-radius: 8px;
         }

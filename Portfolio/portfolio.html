@@ -33,16 +33,23 @@
     <div id="popup" class="overlay">
         <div class="popup-box">
             <h3>Packaging Design Project</h3>
-            <p>This project involved creating a vibrant, pop-art-inspired packaging suite for a new entry into the competitive energy drink market. By utilizing bold halftone patterns, high-contrast palettes, and iconic comic-style typography, the design cuts through shelf clutter to command immediate visual attention. The final aesthetic successfully bridges the gap between retro nostalgia and modern energy, positioning the product as a lifestyle brand for creative, high-tempo consumers</p>
-            <button type="button" class="button" onclick="document.getElementById('popup').style.display='none'">Close</button>
+            <div class="popup-content">
+                <img src="media/Project 3 mock-up.12.10.9-Camera (new).png" id="package1" onclick="document.getElementById('lightbox').style.display='flex'" style="cursor:pointer;">
+                <p>This project involved creating a vibrant, pop-art-inspired packaging suite for a new entry into the competitive energy drink market. By utilizing bold halftone patterns, high-contrast palettes, and iconic comic-style typography, the design cuts through shelf clutter to command immediate visual attention. The final aesthetic successfully bridges the gap between retro nostalgia and modern energy, positioning the product as a lifestyle brand for creative, high-tempo consumers</p>
+            </div>
+            <button type="button" class="button" id="close" onclick="document.getElementById('popup').style.display='none'">Close</button>
         </div>
     </div>
+
+    <div id="lightbox" class="overlay" onclick="this.style.display='none'">
+        <img src="media/Project 3 mock-up.12.10.9-Camera (new).png" id="package1-large">
+     </div>
 
      <div id="popup2" class="overlay">
         <div class="popup-box">
             <h3>Peloton Rebrand</h3>
             <p>To broaden Peloton's appeal beyond its primary female demographic, we launched a high-energy experiential campaign centered on in-person fitness events in major metropolitan hubs. By moving the experience out of the living room and into a competitive, communal setting, we successfully highlighted the versatility of the Peloton App for strength and HIIT. This strategy effectively re-positioned the brand as a performance-driven community, driving significant growth in male user acquisition.</p>
-            <button type="button" class="button" onclick="document.getElementById('popup2').style.display='none'">Close</button>
+            <button type="button" class="button" id="close2" onclick="document.getElementById('popup2').style.display='none'">Close</button>
         </div>
     </div>
 
@@ -50,7 +57,7 @@
         <div class="popup-box">
             <h3>Product Design</h3>
             <p>I am currently working with a team to develop an adaptive jewelry tool designed to restore independence for individuals with mobility challenges or limited fine motor skills. By reimagining traditional fastening mechanisms, the product eliminates the frustration of intricate clasps, allowing users to secure necklaces and bracelets with ease and autonomy. Our goal is to bridge the gap between functional accessibility and personal style.</p>
-            <button type="button" class="button" onclick="document.getElementById('popup3').style.display='none'">Close</button>
+            <button type="button" class="button" id="close3" onclick="document.getElementById('popup3').style.display='none'">Close</button>
         </div>
     </div>
 
@@ -58,17 +65,9 @@
         <div class="popup-box">
             <h3>User-Centered Design</h3>
             <p>Designed and developed a social fitness app through a user-centered design process, focusing on understanding user needs, motivations, and barriers to staying active. Conducted research and iterative testing to shape features that encourage connection, accountability, and engagement among users. The final concept emphasized community-driven workouts, social interaction, and personalized experiences, creating a platform that makes fitness more motivating, accessible, and enjoyable through shared progress and support.</p>
-            <button type="button" class="button" onclick="document.getElementById('popup4').style.display='none'">Close</button>
+            <button type="button" class="button" id="close4" onclick="document.getElementById('popup4').style.display='none'">Close</button>
         </div>
     </div>
-    <!-- <h3>Peloton Rebrand</h3>
-    <p>To broaden Peloton's appeal beyond its primary female demographic, we launched a high-energy experiential campaign centered on in-person fitness events in major metropolitan hubs. By moving the experience out of the living room and into a competitive, communal setting, we successfully highlighted the versatility of the Peloton App for strength and HIIT. This strategy effectively re-positioned the brand as a performance-driven community, driving significant growth in male user acquisition</p>
-    <embed src="media/Final_Presentation-AdPromo.pdf">
-    <h3>Adaptive Jewelry Product Design</h3>
-    <p>I am currently working with a team to develop an adaptive jewelry tool designed to restore independence for individuals with mobility challenges or limited fine motor skills. By reimagining traditional fastening mechanisms, the product eliminates the frustration of intricate clasps, allowing users to secure necklaces and bracelets with ease and autonomy. Our goal is to bridge the gap between functional accessibility and personal style.</p>
-    <h3>Packaging Design Project</h3>
-    <p>This project involved creating a vibrant, pop-art-inspired packaging suite for a new entry into the competitive energy drink market. By utilizing bold halftone patterns, high-contrast palettes, and iconic comic-style typography, the design cuts through shelf clutter to command immediate visual attention. The final aesthetic successfully bridges the gap between retro nostalgia and modern energy, positioning the product as a lifestyle brand for creative, high-tempo consumers</p>
-    <img src="media/Project3_mock-up.12.10.9-Camera.png" alt="energy drink packaging mockup"> -->
     </main>
 </body>
 </html>
