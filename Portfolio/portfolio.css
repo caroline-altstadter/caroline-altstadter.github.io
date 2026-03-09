@@ -122,7 +122,7 @@
 
         nav a {
         display: inline-block;
-        font-size: 1 rem;
+        font-size: 1rem;
         text-transform: uppercase;
         text-decoration: none;
         color: black;
@@ -256,11 +256,13 @@
         .softwares {
             grid-area: dd;
             display: grid;
-            grid-template-columns:1fr 1fr 1fr;
+            grid-template-columns:repeat(5, auto);
+            grid-template-rows: 0px;
             align-items: center;
             justify-content: center;
-            margin-top: -200px;
+            margin-top: -100px;
             grid-gap: 0px;
+            row-gap: 0px;
         }
 
         .year {
@@ -270,6 +272,7 @@
         }
 
         .softimg {
+            display: block;
             width: 80px;
             height: auto; 
             margin: 0px;
@@ -305,7 +308,7 @@
             background: rgba(0,0,0,0.5);
             justify-content: center;
             align-items: center;
-            z-index: 1000;
+            z-index: 2;
         }
 
         .overlay:target {
