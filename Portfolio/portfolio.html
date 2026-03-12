@@ -14,11 +14,11 @@
 </head>
 <body>
    <header>
-        <h1>Caroline Altstadter</h1>
+        <h1><a href="home.html">Caroline Altstadter</a></h1>
     <nav>
         <ul>
             <li><a href="home.html"><strong>Home</strong></a></li>
-            <li><a href="portfolio.html"><strong>Portfolio</strong></a></li>
+            <li><a href="portfolio.html" class="active"><strong>Portfolio</strong></a></li>
             <li><a href="resume.html"><strong>Resume</strong></a></li>
         </ul>
     </nav>
@@ -37,7 +37,8 @@
                 <img src="media/Project 3 mock-up.12.10.9-Camera (new).png" alt="Photo of energy drink packaging design" id="package1" onclick="document.getElementById('lightbox').style.display='flex'" style="cursor:pointer;">
                 <p>This project involved creating a vibrant, pop-art-inspired packaging suite for a new entry into the competitive energy drink market. By utilizing bold halftone patterns, high-contrast palettes, and iconic comic-style typography, the design cuts through shelf clutter to command immediate visual attention. The final aesthetic successfully bridges the gap between retro nostalgia and modern energy, positioning the product as a lifestyle brand for creative, high-tempo consumers</p>
             </div>
-            <button type="button" class="button" id="close" onclick="document.getElementById('popup').style.display='none'">Close</button>
+            <a href="#popup" class="button">Close</a>
+            <!-- <button type="button" class="button" id="close" onclick="document.getElementById('popup').style.display='none'">Close</button> -->
         </div>
     </div>
 
@@ -70,4 +71,8 @@
     </div>
     </main>
 </body>
+<br>
+<footer>
+    <p>&copy; 2026 Caroline Altstadter. All rights reserved.</p>
+</footer>
 </html>
