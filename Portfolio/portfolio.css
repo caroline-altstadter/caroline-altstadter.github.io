@@ -269,8 +269,7 @@
             gap: 20px;
             grid-template-areas:
             "aa bb"
-            "cc dd"
-            "xx ee";
+            "cc ee";
         }
 
         .education {
@@ -285,7 +284,7 @@
             grid-area: bb;
         }
         
-        .softwares {
+        /*.softwares {
             grid-area: dd;
             display: grid;
             grid-template-columns:repeat(5, auto);
@@ -295,7 +294,7 @@
             margin-top: -100px;
             grid-gap: 0px;
             row-gap: 0px;
-        }
+        }*/
 
         .dwnld {
             grid-area: ee;
@@ -312,12 +311,12 @@
             color: #357266;
         }
 
-        .softimg {
+        /*.softimg {
             display: block;
             width: 80px;
             height: auto; 
             margin: 0px;
-        }
+        }*/
 
         .project {
             height: 25%;
@@ -454,8 +453,8 @@
                 "ee";
             }
 
-            .softwares {
+            /*.softwares {
                 margin-top: 0;
                 grid-template-columns: repeat(3, auto);
-            }
+            }*/
         }
