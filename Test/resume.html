@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resume — Caroline Altstadter</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .resume-header {
+      padding: 5rem 0 3rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+
+    /* ── LAYOUT ── */
+    .resume-layout {
+      display: grid;
+      grid-template-columns: 1fr 300px;
+      gap: 3rem;
+      padding-bottom: 4rem;
+    }
+
+    /* ── SECTION BLOCKS ── */
+    .resume-block { margin-bottom: 3rem; }
+
+    .resume-block-title {
+      font-family: var(--serif);
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: var(--charcoal);
+      margin-bottom: 1.25rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .resume-block-title::before {
+      content: '';
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--terracotta);
+      flex-shrink: 0;
+    }
+
+    /* ── EXPERIENCE ENTRIES ── */
+    .exp-entry {
+      display: grid;
+      grid-template-columns: 80px 1fr;
+      gap: 1.25rem;
+      padding: 1.5rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .exp-entry:last-child { border-bottom: none; }
+
+    .exp-year {
+      font-size: 13px;
+      color: var(--light);
+      font-weight: 400;
+      padding-top: 3px;
+    }
+
+    .exp-company {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--terracotta);
+      margin-bottom: 2px;
+    }
+
+    .exp-role {
+      font-size: 16px;
+      font-weight: 500;
+      color: var(--charcoal);
+      margin-bottom: 0.5rem;
+    }
+
+    .exp-desc {
+      font-size: 14px;
+      color: var(--mid);
+      line-height: 1.7;
+    }
+
+    .exp-tag {
+      display: inline-flex;
+      margin-top: 0.75rem;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 3px 10px;
+      border-radius: 100px;
+      background: var(--forest-light);
+      color: var(--forest);
+    }
+
+    /* ── EDUCATION ── */
+    .edu-card {
+      background: var(--warm-white);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .edu-school {
+      font-family: var(--serif);
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: var(--charcoal);
+      margin-bottom: 4px;
+    }
+
+    .edu-degree {
+      font-size: 14px;
+      color: var(--mid);
+      line-height: 1.6;
+      margin-bottom: 0.75rem;
+    }
+
+    .edu-badge {
+      display: inline-block;
+      background: var(--blush-light);
+      color: var(--terra-dark);
+      font-size: 11px;
+      font-weight: 600;
+      padding: 3px 10px;
+      border-radius: 100px;
+      letter-spacing: 0.05em;
+    }
+
+    /* ── SKILLS SIDEBAR ── */
+    .skills-sidebar { position: sticky; top: 80px; align-self: start; }
+
+    .skill-group {
+      background: var(--warm-white);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 1.25rem 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .skill-group-name {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--light);
+      margin-bottom: 0.9rem;
+    }
+
+    .skill-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .skill-chip {
+      font-size: 13px;
+      padding: 4px 12px;
+      border-radius: 100px;
+      background: var(--cream);
+      border: 1px solid var(--border);
+      color: var(--mid);
+      font-weight: 400;
+    }
+
+    .cert-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 0.75rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .cert-item:last-child { border-bottom: none; }
+
+    .cert-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--terracotta);
+      margin-top: 7px;
+      flex-shrink: 0;
+    }
+
+    .cert-name { font-size: 14px; color: var(--charcoal); font-weight: 500; line-height: 1.4; }
+
+    /* download strip */
+    .download-strip {
+      background: var(--terra-light);
+      border-radius: 20px;
+      padding: 2rem 2.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 3rem;
+    }
+
+    .download-strip h3 {
+      font-family: var(--serif);
+      font-size: 1.2rem;
+      font-weight: 500;
+      color: var(--charcoal);
+      margin-bottom: 4px;
+    }
+
+    .download-strip p { font-size: 14px; color: var(--mid); }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="home.html">Caroline Altstadter</a>
+  <ul class="nav-links">
+    <li><a href="home.html">Home</a></li>
+    <li><a href="portfolio.html">Portfolio</a></li>
+    <li><a href="resume.html" class="active">Resume</a></li>
+  </ul>
+</nav>
+
+<main class="page">
+
+  <div class="resume-header fade-up fade-up-1">
+    <div>
+      <p class="section-eyebrow">Experience & education</p>
+      <h1 class="section-heading">My resume</h1>
+      <div class="section-rule"></div>
+    </div>
+    <a href="media/CarolineAltstadter-Resume-2.21.26.pdf" class="btn btn-primary" download>
+      Download PDF
+    </a>
+  </div>
+
+  <div class="download-strip fade-up fade-up-2">
+    <div>
+      <h3>Want the full picture?</h3>
+      <p>Download my resume for a complete overview of my experience, education, and skills.</p>
+    </div>
+    <a href="media/CarolineAltstadter-Resume-2.21.26.pdf" class="btn btn-outline" download>
+      Download resume
+    </a>
+  </div>
+
+  <div class="resume-layout">
+
+    <!-- LEFT: Experience + Education -->
+    <div>
+
+      <!-- EXPERIENCE -->
+      <div class="resume-block fade-up fade-up-3">
+        <h2 class="resume-block-title">Experience</h2>
+
+        <div class="exp-entry">
+          <div class="exp-year">2025</div>
+          <div>
+            <div class="exp-company">NI (now part of Emerson)</div>
+            <div class="exp-role">Product Marketing Engineering Intern</div>
+            <div class="exp-desc">A marketing-focused internship centered on brand integration and sales enablement. Involved revamped collateral post-merger, translation of technical content into accessible resources, and redesigned digital tools to improve usability, clarity, and sales efficiency.</div>
+            <span class="exp-tag">Marketing · Sales Enablement</span>
+          </div>
+        </div>
+
+        <div class="exp-entry">
+          <div class="exp-year">2024</div>
+          <div>
+            <div class="exp-company">TD SYNNEX</div>
+            <div class="exp-role">Partner Enablement Intern</div>
+            <div class="exp-desc">An operations-focused internship centered on optimizing sales resources, reducing costs through vendor research, improving CRM data accuracy, and enhancing digital content to support partner acquisition and public sector visibility.</div>
+            <span class="exp-tag">Operations · CRM</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- EDUCATION -->
+      <div class="resume-block fade-up fade-up-4">
+        <h2 class="resume-block-title">Education</h2>
+
+        <div class="edu-card">
+          <div class="edu-school">University of Colorado, Boulder</div>
+          <div class="edu-degree">
+            B.S. Business Administration — Emphasis in Marketing<br />
+            Minors: Creative Technology & Design · Information Science<br />
+            Global Business Certificate
+          </div>
+          <span class="edu-badge">Leeds School of Business</span>
+        </div>
+
+        <div class="edu-card">
+          <div class="edu-school">Leeds Scholars Program</div>
+          <div class="edu-degree">
+            A leadership and professional development program offering industry-led workshops, mentorship, community outreach, and global experiential learning — empowering participants to build real-world skills and lead impact-driven projects.
+          </div>
+          <span class="edu-badge">Leadership Program</span>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- RIGHT: Skills sidebar -->
+    <div class="skills-sidebar fade-up fade-up-3">
+
+      <div class="skill-group">
+        <div class="skill-group-name">Certifications</div>
+        <div class="cert-item">
+          <div class="cert-dot"></div>
+          <div class="cert-name">Amazon Web Services Cloud Practitioner</div>
+        </div>
+        <div class="cert-item">
+          <div class="cert-dot"></div>
+          <div class="cert-name">Digital Marketing Certification</div>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-group-name">Marketing skills</div>
+        <div class="skill-chips">
+          <span class="skill-chip">SEO</span>
+          <span class="skill-chip">SEM</span>
+          <span class="skill-chip">Brand strategy</span>
+          <span class="skill-chip">Sales enablement</span>
+          <span class="skill-chip">Content marketing</span>
+          <span class="skill-chip">Product marketing</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-group-name">Design & creative</div>
+        <div class="skill-chips">
+          <span class="skill-chip">Adobe CC</span>
+          <span class="skill-chip">Canva</span>
+          <span class="skill-chip">UI/UX</span>
+          <span class="skill-chip">Packaging design</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-group-name">Technical</div>
+        <div class="skill-chips">
+          <span class="skill-chip">HTML</span>
+          <span class="skill-chip">CSS</span>
+          <span class="skill-chip">JavaScript</span>
+          <span class="skill-chip">Microsoft Excel</span>
+          <span class="skill-chip">Tableau</span>
+          <span class="skill-chip">Microsoft Dynamics</span>
+          <span class="skill-chip">AWS</span>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</main>
+
+<footer>© 2026 Caroline Altstadter. All rights reserved.</footer>
+
+</body>
+</html>
