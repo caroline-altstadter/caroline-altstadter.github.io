@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #111;
+    color: white;
+    overflow: hidden;
+}
+
+#startScreen, #winScreen {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.85);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    z-index: 10;
+}
+
+#winScreen {
+    display: none;
+}
+
+#startScreen input {
+    font-size: 1.5rem;
+    padding: 8px;
+    width: 100px;
+    text-align: center;
+}
+
+#startScreen button, #winScreen button {
+    font-size: 1.2rem;
+    padding: 10px 24px;
+    cursor: pointer;
+    background: #e63946;
+    color: white;
+    border: none;
+    border-radius: 8px;
+}
+
+#gamePlay {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background: #000000;
+    display: none;
+}
+
+#volumeDisplay, #goalDisplay {
+    position: absolute;
+    top: 16px;
+    font-size: 1.4rem;
+}
+
+#volumeDisplay {
+    left: 16px;
+}
+
+#goalDisplay {
+    right: 16px;
+}
+
+#bucket {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: grab;
+    user-select: none;
+}
+
+.item {
+    position: absolute;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 6px 12px;
+    border-radius: 20px;
+    background: #61f477;
+    color: #000000;
+}

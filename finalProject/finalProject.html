@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bad UI Volume Control</title>
+    <link rel="stylesheet" href="finalProject.css">
+</head>
+<body>
+    <div id="startScreen">
+        <h1>Volume Control Bucket Game</h1>
+        <p>Set your goal volume:</p>
+        <input type="number" id="goalInput" min="0" max="100" value="0">
+        <button id="startButton">Start</button>
+    </div>
+
+    <div id="gamePlay">
+        <div id="volumeDisplay">Volume: <span id="volumeNumber">50</span>%</div>
+        <div id="goalDisplay">Goal: <span id="goalNumber">??</span>%</div>
+        <div id="bucket">___</div>
+    </div>
+
+    <div id="winScreen">
+        <h1>Congratulations!</h1>
+        <p>Your reached your goal volume!</p>
+        <button id="restartButton">Play Again</button>
+    </div>
+
+    <script src="finalProject.js"></script>
+</body>
+</html>
