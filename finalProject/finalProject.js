@@ -25,6 +25,11 @@ function spawnItem() {
         const currentTop = parseInt(item.style.top);
         item.style.top = (currentTop + 3) + 'px';
 
+        const fadeStart = window.innerHeight * 0.1;
+        const fadeEnd = window.innerHeight;
+        const opacity = currentTop < fadeStart ? 1 : 1 - (currentTop - fadeStart) / (fadeEnd - fadeStart) * 0.85;
+        item.style.opacity = Math.max(0, opacity);
+
         if (currentTop > window.innerHeight) {
             clearInterval(fallInterval);
             item.remove();

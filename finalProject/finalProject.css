@@ -4,8 +4,12 @@
     box-sizing: border-box;
 }
 
+h1 { 
+    font-family: 'Zen Dots', sans-serif;
+}
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Stack Sans Headline', sans-serif;
     background: #111;
     color: white;
     overflow: hidden;
@@ -14,7 +18,7 @@ body {
 #startScreen, #winScreen {
     position: fixed;
     inset: 0;
-    background: rgba(0,0,0,0.85);
+    background: #8c8686;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -38,7 +42,7 @@ body {
     font-size: 1.2rem;
     padding: 10px 24px;
     cursor: pointer;
-    background: #e63946;
+    background: #000000;
     color: white;
     border: none;
     border-radius: 8px;
@@ -48,7 +52,7 @@ body {
     position: relative;
     width: 100vw;
     height: 100vh;
-    background: #000000;
+    background: #8c8686;
     display: none;
 }
 
